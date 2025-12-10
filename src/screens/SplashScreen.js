@@ -5,6 +5,7 @@ import {
   StyleSheet,
   TouchableOpacity,
   Dimensions,
+  Image,
 } from 'react-native';
 import { COLORS } from '../constants/colors';
 import { useNavigation } from '@react-navigation/native';
@@ -22,13 +23,13 @@ export default function SplashScreen() {
 
       {/* Content */}
       <View style={styles.content}>
-        {/* Logo */}
+        {/* Logo Image */}
         <View style={styles.logoContainer}>
-          <View style={styles.logoBox}>
-            <Text style={styles.logoText}>E9</Text>
-            <Text style={styles.logoTextSmall}>pay</Text>
-            <View style={styles.redDot} />
-          </View>
+          <Image
+            source={require('../assets/images/e9pay-logo.png')}
+            style={styles.logoImage}
+            resizeMode="contain"
+          />
         </View>
 
         {/* Shop Title */}
@@ -62,18 +63,18 @@ export default function SplashScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F5F5F5',
+    backgroundColor: '#C1D7D8',
   },
-  circleTop: {
-    position: 'absolute',
-    width: width * 1.2,
-    height: width * 1.2,
-    borderRadius: (width * 1.2) / 2,
-    backgroundColor: '#0066CC',
-    top: -width * 0.6,
-    right: -width * 0.3,
-    opacity: 0.9,
-  },
+  // circleTop: {
+  //   position: 'absolute',
+  //   width: width * 1.2,
+  //   height: width * 1.2,
+  //   borderRadius: (width * 1.2) / 2,
+  //   backgroundColor: '#0066CC',
+  //   top: -width * 0.6,
+  //   right: -width * 0.3,
+  //   opacity: 0.9,
+  // },
   circleBottom: {
     position: 'absolute',
     width: width * 0.8,
@@ -91,15 +92,10 @@ const styles = StyleSheet.create({
     zIndex: 1,
   },
   logoContainer: {
-    marginBottom: 20,
-  },
-  logoBox: {
-    width: 100,
-    height: 100,
+    marginTop:100,
     backgroundColor: COLORS.white,
-    borderRadius: 20,
-    justifyContent: 'center',
-    alignItems: 'center',
+    borderRadius: 100,
+    padding: 20,
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
@@ -108,33 +104,16 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.1,
     shadowRadius: 10,
     elevation: 5,
-    position: 'relative',
   },
-  logoText: {
-    fontSize: 36,
-    fontWeight: 'bold',
-    color: COLORS.black,
-  },
-  logoTextSmall: {
-    fontSize: 20,
-    fontWeight: '600',
-    color: COLORS.black,
-    marginTop: -5,
-  },
-  redDot: {
-    position: 'absolute',
-    top: 15,
-    right: 15,
-    width: 10,
-    height: 10,
-    borderRadius: 5,
-    backgroundColor: COLORS.red,
+  logoImage: {
+    width: 120,
+    height: 120,
   },
   title: {
     fontSize: 32,
     fontWeight: 'bold',
     color: COLORS.black,
-    marginTop: 20,
+    marginTop: 120,
     letterSpacing: 2,
   },
   subtitle: {

@@ -18,8 +18,8 @@ function MainTabs() {
   return (
     <Tab.Navigator
       screenOptions={{
-        tabBarActiveTintColor: COLORS.primary,
-        tabBarInactiveTintColor: COLORS.gray,
+        tabBarActiveTintColor: COLORS.red,
+        tabBarInactiveTintColor: COLORS.primary,
         headerShown: false,
         tabBarStyle: {
           paddingBottom: 5,
