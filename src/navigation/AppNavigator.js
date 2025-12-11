@@ -8,6 +8,9 @@ import SplashScreen from '../screens/SplashScreen';
 import LoginScreen from '../screens/LoginScreen';
 import HomeScreen from '../screens/HomeScreen';
 import ShopScreen from '../screens/ShopScreen';
+import CartScreen from '../screens/CartScreen';
+import FavoritesScreen from '../screens/FavoritesScreen';
+import ProfileScreen from '../screens/ProfileScreen';
 import { COLORS } from '../constants/colors';
 
 const Stack = createNativeStackNavigator();
@@ -39,7 +42,7 @@ function MainTabs() {
       />
       <Tab.Screen 
         name="Favorites" 
-        component={HomeScreen}
+        component={FavoritesScreen}
         options={{
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="heart-outline" size={size} color={color} />
@@ -57,7 +60,7 @@ function MainTabs() {
       />
       <Tab.Screen 
         name="Cart" 
-        component={HomeScreen}
+        component={CartScreen}
         options={{
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="cart-outline" size={size} color={color} />
@@ -66,7 +69,7 @@ function MainTabs() {
       />
       <Tab.Screen 
         name="Profile" 
-        component={HomeScreen}
+        component={ProfileScreen}
         options={{
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="person-outline" size={size} color={color} />

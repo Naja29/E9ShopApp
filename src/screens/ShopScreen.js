@@ -91,12 +91,14 @@ export default function ShopScreen() {
           </View>
 
           <View style={styles.categoriesGrid}>
-            {renderCategory('E9 Pay Service', 'NEW', '#FF6B6B')}
-            {renderCategory('Sial Academy', 'NEW', '#FF6B6B')}
-            {renderCategory('Air Ticket Service')}
-            {renderCategory('Student Visa')}
-            {renderCategory('Stock Market')}
-            {renderCategory('Law Help')}
+            {renderCategory('E9 Pay Service', '', '#FF6B6B', require('../assets/images/category-1.png'))}
+            {renderCategory('Sial Academy', '', '#FF6B6B', require('../assets/images/category-2.png'))}
+            {renderCategory('Air Tickets', 'Coming Soon!', '#FF6B6B', require('../assets/images/category-3.png'))}
+            {renderCategory('Stock Market', '', '#FF6B6B', require('../assets/images/category-5.png'))}
+            {renderCategory('නීති උපදෙස්', '', '#FF6B6B', require('../assets/images/category-6.png'))}
+            {renderCategory('සිල්බි පොහොම්', '', '#FF6B6B', require('../assets/images/category-7.png'))}
+            {renderCategory('Visa Consultation', '', '#FF6B6B', require('../assets/images/category-8.png'))}
+            {renderCategory('Student Visa', 'Coming Soon!', '#FF6B6B', require('../assets/images/category-4.png'))}
           </View>
         </View>
 
@@ -241,7 +243,7 @@ export default function ShopScreen() {
 }
 
 // Helper function to render category cards
-function renderCategory(title, badge, badgeColor) {
+function renderCategory(title, badge, badgeColor, imageName) {
   return (
     <TouchableOpacity style={styles.categoryCard}>
       {badge && (
@@ -250,7 +252,11 @@ function renderCategory(title, badge, badgeColor) {
         </View>
       )}
       <View style={styles.categoryIcon}>
-        <Ionicons name="storefront" size={30} color={COLORS.primary} />
+        <Image
+          source={imageName}
+          style={styles.categoryImage}
+          resizeMode="contain"
+        />
       </View>
       <Text style={styles.categoryTitle} numberOfLines={2}>
         {title}
@@ -258,7 +264,6 @@ function renderCategory(title, badge, badgeColor) {
     </TouchableOpacity>
   );
 }
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -326,6 +331,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#E8F4FF',
     borderRadius: 15,
     marginRight: 15,
+    marginLeft: 15,
     overflow: 'hidden',
   },
   adImage: {
@@ -385,7 +391,7 @@ const styles = StyleSheet.create({
     width: (width - 60) / 2,
     backgroundColor: COLORS.white,
     borderRadius: 15,
-    padding: 15,
+    padding: 25,
     marginBottom: 15,
     alignItems: 'center',
     borderWidth: 1,
@@ -406,8 +412,9 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   categoryIcon: {
-    width: 60,
-    height: 60,
+    width: 50,
+    height: 50,
+    marginTop: 30,
     borderRadius: 30,
     backgroundColor: COLORS.lightGray,
     justifyContent: 'center',
@@ -416,9 +423,14 @@ const styles = StyleSheet.create({
   },
   categoryTitle: {
     fontSize: 14,
+    marginTop: 10,
     fontWeight: '600',
     color: COLORS.black,
     textAlign: 'center',
+  },
+  categoryImage: {
+    width: 80,
+    height: 80,
   },
   topicsRow: {
     flexDirection: 'row',
