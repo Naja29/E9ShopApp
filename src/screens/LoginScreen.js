@@ -109,16 +109,6 @@ const styles = StyleSheet.create({
   top: -width * 0.4,
   right: -width * 0.2,
 },
-  // circleTop: {
-  //   position: 'absolute',
-  //   width: width * 1.5,
-  //   height: width * 1.5,
-  //   borderRadius: (width * 1.5) / 2,
-  //   backgroundColor: '#0066CC',
-  //   top: -width * 0.8,
-  //   right: -width * 0.5,
-  //   opacity: 0.9,
-  // },
   content: {
     flex: 1,
     paddingHorizontal: 30,
@@ -126,6 +116,7 @@ const styles = StyleSheet.create({
     zIndex: 1,
   },
   title: {
+    marginTop:80,
     fontSize: 36,
     fontWeight: 'bold',
     color: COLORS.black,

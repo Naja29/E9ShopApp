@@ -65,25 +65,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#C1D7D8',
   },
-  // circleTop: {
-  //   position: 'absolute',
-  //   width: width * 1.2,
-  //   height: width * 1.2,
-  //   borderRadius: (width * 1.2) / 2,
-  //   backgroundColor: '#0066CC',
-  //   top: -width * 0.6,
-  //   right: -width * 0.3,
-  //   opacity: 0.9,
-  // },
-  circleBottom: {
-    position: 'absolute',
-    width: width * 0.8,
-    height: width * 0.8,
-    borderRadius: (width * 0.8) / 2,
-    backgroundColor: '#E8F4FF',
-    bottom: -width * 0.4,
-    left: -width * 0.2,
-  },
   content: {
     flex: 1,
     justifyContent: 'center',
@@ -92,7 +73,7 @@ const styles = StyleSheet.create({
     zIndex: 1,
   },
   logoContainer: {
-    marginTop:100,
+    marginTop:150,
     backgroundColor: COLORS.white,
     borderRadius: 100,
     padding: 20,
@@ -113,7 +94,7 @@ const styles = StyleSheet.create({
     fontSize: 32,
     fontWeight: 'bold',
     color: COLORS.black,
-    marginTop: 120,
+    marginTop: 80,
     letterSpacing: 2,
   },
   subtitle: {
@@ -129,7 +110,7 @@ const styles = StyleSheet.create({
     paddingVertical: 16,
     paddingHorizontal: 60,
     borderRadius: 30,
-    marginBottom: 20,
+    marginBottom: 30,
     width: width - 60,
     alignItems: 'center',
     shadowColor: COLORS.primary,
@@ -149,7 +130,7 @@ const styles = StyleSheet.create({
   linkContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginBottom: 40,
+    marginBottom: 80,
   },
   linkText: {
     color: COLORS.primary,

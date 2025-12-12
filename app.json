@@ -1,14 +1,14 @@
 {
   "expo": {
-    "name": "E9ShopAppNew",
-    "slug": "E9ShopAppNew",
+    "name": "E9Shop",
+    "slug": "E9Shop",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/E9Shop.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
-      "image": "./assets/splash-icon.png",
+      "image": "./assets/E9Shop.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -17,14 +17,14 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/E9Shop.png",
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
-      "package": "com.naja299.E9ShopAppNew"
+      "package": "com.naja299.E9Shop"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/E9Shop.png"
     },
     "extra": {
       "eas": {

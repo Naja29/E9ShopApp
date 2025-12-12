@@ -55,10 +55,10 @@ export default function ShopScreen() {
             showsHorizontalScrollIndicator={false}
             style={styles.adCarousel}
           >
-            {[1, 2, 3].map((item) => (
+            {[1].map((item) => (
               <TouchableOpacity key={item} style={styles.adBanner}>
                 <Image
-                  source={require('../assets/images/ad-banner.png')}
+                  source={require('../assets/images/ad-banner.jpg')}
                   style={styles.adImage}
                   resizeMode="cover"
                 />
@@ -140,7 +140,7 @@ export default function ShopScreen() {
                     <Ionicons name="image-outline" size={40} color={COLORS.gray} />
                   </View>
                   <Text style={styles.productName} numberOfLines={2}>
-                    Lorem ipsum dolor sit amet consectetur
+                    Trendy Crossbody Bag
                   </Text>
                   <Text style={styles.productPrice}>Rs. {item * 1000}</Text>
                 </View>
@@ -225,10 +225,10 @@ export default function ShopScreen() {
                   <Ionicons name="image-outline" size={40} color={COLORS.gray} />
                 </View>
                 <Text style={styles.productName} numberOfLines={2}>
-                  Eg Pay Service
+                  Wireless Bluetooth Earbuds
                 </Text>
                 <Text style={styles.productDescription} numberOfLines={2}>
-                  Lorem ipsum dolor sit amet consectetur
+                  Crystal-clear sound with long-lasting battery life.
                 </Text>
               </View>
             ))}
@@ -283,17 +283,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginBottom: 15,
   },
-  logoContainer: {
-    // width: 50,
-    // height: 50,
-    // backgroundColor: COLORS.white,
-    // borderRadius: 10,
-    justifyContent: 'center',
-    alignItems: 'center',
-    // borderWidth: 1,
-    // borderColor: COLORS.border,
-    overflow: 'hidden',
-  },
   logoImage: {
     width: 80,
     height: 80,
@@ -330,8 +319,6 @@ const styles = StyleSheet.create({
     height: 150,
     backgroundColor: '#E8F4FF',
     borderRadius: 15,
-    marginRight: 15,
-    marginLeft: 15,
     overflow: 'hidden',
   },
   adImage: {

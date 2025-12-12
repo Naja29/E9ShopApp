@@ -55,7 +55,8 @@ export default function HomeScreen() {
           <View style={styles.announcementContent}>
             <Text style={styles.announcementTitle}>Announcement</Text>
             <Text style={styles.announcementText}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              <Text style={{ fontWeight: "bold" }}>🎉 New Arrivals Just Dropped!</Text>
+              {"\n"}Check out the latest collections and grab your favorites before they run out.
             </Text>
           </View>
           <TouchableOpacity style={styles.announcementIcon}>
@@ -148,20 +149,9 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
   },
-  logoContainer: {
-  width: 70,
-  height: 70,
-  backgroundColor: COLORS.white,
-  borderRadius: 100,
-  justifyContent: 'center',
-  alignItems: 'center',
-  borderWidth: 1,
-  borderColor: COLORS.border,
-  overflow: 'hidden',
-  },
   logoImage: {
-    width: 50,
-    height: 50,
+    width: 80,
+    height: 80,
   },
   headerRight: {
     flexDirection: 'row',
@@ -170,14 +160,14 @@ const styles = StyleSheet.create({
   },
   myActivityButton: {
     backgroundColor: COLORS.primary,
-    paddingHorizontal: 35,
-    paddingVertical: 8,
-    borderRadius: 20,
+    paddingHorizontal: 25,
+    paddingVertical: 7,
+    borderRadius: 10,
   },
   myActivityText: {
     color: COLORS.white,
     fontSize: 12,
-    fontWeight: '600',
+    fontWeight: '500',
   },
   iconButton: {
     padding: 5,
